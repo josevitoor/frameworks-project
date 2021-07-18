@@ -1,0 +1,9 @@
+.m5 {
+    margin: 5px;
+  }
+
+.votingCard{
+  background-color: rgb(166, 200,224);
+  border: 1px solid black;
+  border-radius: 10px;
+}
