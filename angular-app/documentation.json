@@ -9,7 +9,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-00fecf367b8bd8793aad23f863ca90e5",
+            "id": "component-AppComponent-1145ef47126706c4dc70a967579ed47e",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -56,7 +56,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  template: '<result [votes]=\"vote\"></result>',\n  //templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  vote = [{ 'option': 'Sim', 'count': 6 }, { 'option': 'Não', 'count': 2 }];\n  title = 'angular-app';\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  template: '<result [votes]=\"vote\"></result>',\r\n  //templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  vote = [{ 'option': 'Sim', 'count': 6 }, { 'option': 'Não', 'count': 2 }];\r\n  title = 'angular-app';\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -68,7 +68,7 @@
         },
         {
             "name": "BoothComponent",
-            "id": "component-BoothComponent-092c211f43c4a82cbce787e610f1c248",
+            "id": "component-BoothComponent-c99447a39a128a42728d3ab12b205fcd",
             "file": "src/components/booth.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -143,7 +143,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'booth',\n  template: `\n  <button class=\"m5\" *ngFor=\"let option of options; index as i\" (click)=\"onVote.emit(i)\">\n    {{option}}\n  </button>\n  `,\n  styleUrls: ['./style.css'],\n})\nexport class BoothComponent {\n  @Input() options!: string[];\n  @Output() onVote = new EventEmitter<number>()\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'booth',\r\n  template: `\r\n  <button class=\"m5\" *ngFor=\"let option of options; index as i\" (click)=\"onVote.emit(i)\">\r\n    {{option}}\r\n  </button>\r\n  `,\r\n  styleUrls: ['./style.css'],\r\n})\r\nexport class BoothComponent {\r\n  @Input() options!: string[];\r\n  @Output() onVote = new EventEmitter<number>()\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -388,13 +388,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-1a3fa2c8b09c8ad6272ba57cf408dedd",
+            "id": "module-AppModule-d1d5f2e3db3fcb5e204e6bd21ec039f3",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { BoothComponent } from '../components/booth.component';\nimport { ResultComponent } from '../components/result.component';\nimport { VotingCardComponent } from '../components/votingCard.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    ResultComponent,\n    BoothComponent,\n    VotingCardComponent,\n  ],\n  imports: [\n    BrowserModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { BoothComponent } from '../components/booth.component';\r\nimport { ResultComponent } from '../components/result.component';\r\nimport { VotingCardComponent } from '../components/votingCard.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    ResultComponent,\r\n    BoothComponent,\r\n    VotingCardComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -460,7 +460,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  production: true\n}"
+                "defaultValue": "{\r\n  production: true\r\n}"
             },
             {
                 "name": "environment",
@@ -470,7 +470,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  production: false\n}"
+                "defaultValue": "{\r\n  production: false\r\n}"
             },
             {
                 "name": "PrimaryBoothPage",
@@ -549,7 +549,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<BoothComponent>",
-                "defaultValue": "(args: BoothComponent) => ({\n  props: args,\n})"
+                "defaultValue": "(args: BoothComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -606,7 +606,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  production: true\n}"
+                    "defaultValue": "{\r\n  production: true\r\n}"
                 }
             ],
             "src/environments/environment.ts": [
@@ -618,7 +618,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  production: false\n}"
+                    "defaultValue": "{\r\n  production: false\r\n}"
                 }
             ],
             "src/stories/Booth.stories.ts": [
@@ -650,7 +650,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<BoothComponent>",
-                    "defaultValue": "(args: BoothComponent) => ({\n  props: args,\n})"
+                    "defaultValue": "(args: BoothComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/Result.stories.ts": [
