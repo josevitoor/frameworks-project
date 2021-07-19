@@ -1,0 +1,51 @@
+info @storybook/vue3 v6.3.4
+info 
+info => Cleaning outputDir: C:\Users\josev\AppData\Local\Temp\chromatic--9484-9oDYXBS8MRzF
+info => Loading presets
+info => Compiling preview..
+info => Loading 1 config file in "C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\.storybook"
+info => Loading 9 other files in "C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\.storybook"
+info => Adding stories defined in "C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\.storybook\main.js"
+info => Using implicit CSS loaders
+info => Using default Webpack4 setup
+<s> [webpack.Progress] 0% compiling
+<s> [webpack.Progress] 10% building 0/0 modules 0 active 
+<s> [webpack.Progress] 10% building 0/1 modules 1 active multi C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\@storybook\core-client\dist\esm\globals\polyfills.js C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\@storybook\core-client\dist\esm\globals\globals.js C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\.storybook\storybook-init-framework-entry.js C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\@storybook\addon-docs\dist\esm\frameworks\common\config.js-generated-other-entry.js C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\@storybook\addon-docs\dist\esm\frameworks\vue3\config.js-generated-other-entry.js C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\@storybook\addon-links\dist\esm\preset\addDecorator.js-generated-other-entry.js C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\@storybook\addon-actions\dist\esm\preset\addDecorator.js-generated-other-entry.js C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\@storybook\addon-actions\dist\esm\preset\addArgs.js-generated-other-entry.js C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\@storybook\addon-backgrounds\dist\esm\preset\addDecorator.js-generated-other-entry.js C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\@storybook\addon-backgrounds\dist\esm\preset\addParameter.js-generated-other-entry.js C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\@storybook\addon-measure\dist\esm\preset\preview.js-generated-other-entry.js C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\storybook-addon-outline\dist\esm\preset\addDecorator.js-generated-other-entry.js C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\.storybook\preview.js-generated-config-entry.js C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\.storybook\generated-stories-entry.js
+<s> [webpack.Progress] 10% building 1/1 modules 0 active 
+(node:8208) DeprecationWarning: Default PostCSS plugins are deprecated. When switching to '@storybook/addon-postcss',
+you will need to add your own plugins, such as 'postcss-flexbugs-fixes' and 'autoprefixer'.
+
+See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#deprecated-default-postcss-plugins for details.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ERR! NestedError: Cannot copy from `favicon.ico` to `C:\Users\josev\AppData\Local\Temp\chromatic--9484-9oDYXBS8MRzF\favicon.ico`: Cannot write to `C:\Users\josev\AppData\Local\Temp\chromatic--9484-9oDYXBS8MRzF\favicon.ico`: EPERM: operation not permitted, open 'C:\Users\josev\AppData\Local\Temp\chromatic--9484-9oDYXBS8MRzF\favicon.ico'
+ERR!     at pMap.concurrency.concurrency (C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\cpy\index.js:146:11)
+ERR!     at processTicksAndRejections (internal/process/task_queues.js:93:5)
+ERR!     at async C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\cpy\node_modules\p-map\index.js:57:15
+ERR! Caused By: NestedError: Cannot write to `C:\Users\josev\AppData\Local\Temp\chromatic--9484-9oDYXBS8MRzF\favicon.ico`: EPERM: operation not permitted, open 'C:\Users\josev\AppData\Local\Temp\chromatic--9484-9oDYXBS8MRzF\favicon.ico'
+ERR!     at cpFileAsync (C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\cp-file\index.js:34:10)
+ERR!     at processTicksAndRejections (internal/process/task_queues.js:93:5)
+ERR!     at async pMap.concurrency.concurrency (C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\cpy\index.js:144:5)
+ERR!     at async C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\cpy\node_modules\p-map\index.js:57:15
+ERR! Caused By: Error: EPERM: operation not permitted, open 'C:\Users\josev\AppData\Local\Temp\chromatic--9484-9oDYXBS8MRzF\favicon.ico'
+ERR!  NestedError: Cannot copy from `favicon.ico` to `C:\Users\josev\AppData\Local\Temp\chromatic--9484-9oDYXBS8MRzF\favicon.ico`: Cannot write to `C:\Users\josev\AppData\Local\Temp\chromatic--9484-9oDYXBS8MRzF\favicon.ico`: EPERM: operation not permitted, open 'C:\Users\josev\AppData\Local\Temp\chromatic--9484-9oDYXBS8MRzF\favicon.ico'
+ERR!     at pMap.concurrency.concurrency (C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\cpy\index.js:146:11)
+ERR!     at processTicksAndRejections (internal/process/task_queues.js:93:5)
+ERR!     at async C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\cpy\node_modules\p-map\index.js:57:15
+ERR! Caused By: NestedError: Cannot write to `C:\Users\josev\AppData\Local\Temp\chromatic--9484-9oDYXBS8MRzF\favicon.ico`: EPERM: operation not permitted, open 'C:\Users\josev\AppData\Local\Temp\chromatic--9484-9oDYXBS8MRzF\favicon.ico'
+ERR!     at cpFileAsync (C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\cp-file\index.js:34:10)
+ERR!     at processTicksAndRejections (internal/process/task_queues.js:93:5)
+ERR!     at async pMap.concurrency.concurrency (C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\cpy\index.js:144:5)
+ERR!     at async C:\Users\josev\OneDrive\Área de Trabalho\frameworks\vue-app\node_modules\cpy\node_modules\p-map\index.js:57:15
+ERR! Caused By: Error: EPERM: operation not permitted, open 'C:\Users\josev\AppData\Local\Temp\chromatic--9484-9oDYXBS8MRzF\favicon.ico' {
+ERR!   nested: [Error: EPERM: operation not permitted, open 'C:\Users\josev\AppData\Local\Temp\chromatic--9484-9oDYXBS8MRzF\favicon.ico'] {
+ERR!     errno: -4048,
+ERR!     code: 'EPERM',
+ERR!     syscall: 'open',
+ERR!     path: 'C:\\Users\\josev\\AppData\\Local\\Temp\\chromatic--9484-9oDYXBS8MRzF\\favicon.ico'
+ERR!   },
+ERR!   errno: -4048,
+ERR!   code: 'EPERM',
+ERR!   syscall: 'open',
+ERR!   path: 'C:\\Users\\josev\\AppData\\Local\\Temp\\chromatic--9484-9oDYXBS8MRzF\\favicon.ico',
+ERR!   name: 'CpyError'
+ERR! }
