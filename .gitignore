@@ -1,0 +1,5 @@
+angular-app/node_modules/
+react-app/node_modules/
+vue-app/node_modules/
+svelte-app/node_modules/
+node_modules/
