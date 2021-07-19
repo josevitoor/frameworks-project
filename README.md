@@ -1,1 +1,2 @@
 Projeto para utilização de componentes em Angular,React, Vue e Svelte.
+Link Chromatic Svelte: https://www.chromatic.com/builds?appId=60f4d60f9dae4400391f58b3&inviteToken=8b1db69875164ebda62f3eada728a538
