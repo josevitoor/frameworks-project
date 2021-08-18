@@ -147,7 +147,150 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".m5 {\r\n    margin: 5px;\r\n  }\r\n\r\n.votingCard{\r\n  background-color: rgb(166, 200,224);\r\n  border: 1px solid black;\r\n  border-radius: 10px;\r\n}",
+                    "data": ".m5 {\r\n    margin: 5px;\r\n  }\r\n\r\n.votingCard{\r\n  background-color: rgb(166, 200,224);\r\n  border: 1px solid black;\r\n  border-radius: 10px;\r\n}\r\n\r\n.error{\r\n  color: red;\r\n  font-size: 15px;\r\n}",
+                    "styleUrl": "./style.css"
+                }
+            ],
+            "stylesData": ""
+        },
+        {
+            "name": "FormComponent",
+            "id": "component-FormComponent-8d4b8a73c19ca3e76c2a070a957ecc91",
+            "file": "src/components/form.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "formulario",
+            "styleUrls": [
+                "./style.css"
+            ],
+            "styles": [],
+            "template": "<div *ngIf=\"state === 'close'; else votingCard\">\n    <form >\n        <label>Título *</label><br/>\n        <input [(ngModel)]=\"title\" type=\"text\" name=\"title\"><br/>\n        <div *ngFor=\"let vote of votes; index as i\">\n            <label> Opção {{i}} *</label><br/>\n            <input [(ngModel)]=\"vote.option\" type=\"text\" name={{vote.option}}><br/>\n\n            <label> Votes {{i}} *</label><br/>\n            <input [(ngModel)]=\"vote.count\" type=\"number\" name={{vote.count}}><br/>\n        </div>\n        <div *ngIf=\"error === 'close'; else errorText\">\n        </div>\n        <ng-template #errorText>\n            <p class=\"error\">É preciso preencher todos os campos e os votos maiores que zero!</p>\n        </ng-template>\n        <booth [options]=\"['Atualizar']\" (onVote)=\"onVote($event)\"></booth>\n    </form>\n</div>\n<ng-template #votingCard>\n    <votingCard [votes]=\"votes\" state='open' title={{title}}></votingCard>\n</ng-template>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "title",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 34,
+                    "type": "string"
+                },
+                {
+                    "name": "votes",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 33,
+                    "type": "literal type[]"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "error",
+                    "defaultValue": "'close'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 36
+                },
+                {
+                    "name": "state",
+                    "defaultValue": "'close'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 35
+                },
+                {
+                    "name": "title",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 34,
+                    "decorators": [
+                        {
+                            "name": "Input",
+                            "stringifiedArguments": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "votes",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 33,
+                    "decorators": [
+                        {
+                            "name": "Input",
+                            "stringifiedArguments": ""
+                        }
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onVote",
+                    "args": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 56,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "validationError",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 38,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n    selector: 'formulario',\r\n    template: `\r\n    <div *ngIf=\"state === 'close'; else votingCard\">\r\n        <form >\r\n            <label>Título *</label><br/>\r\n            <input [(ngModel)]=\"title\" type=\"text\" name=\"title\"><br/>\r\n            <div *ngFor=\"let vote of votes; index as i\">\r\n                <label> Opção {{i}} *</label><br/>\r\n                <input [(ngModel)]=\"vote.option\" type=\"text\" name={{vote.option}}><br/>\r\n\r\n                <label> Votes {{i}} *</label><br/>\r\n                <input [(ngModel)]=\"vote.count\" type=\"number\" name={{vote.count}}><br/>\r\n            </div>\r\n            <div *ngIf=\"error === 'close'; else errorText\">\r\n            </div>\r\n            <ng-template #errorText>\r\n                <p class=\"error\">É preciso preencher todos os campos e os votos maiores que zero!</p>\r\n            </ng-template>\r\n            <booth [options]=\"['Atualizar']\" (onVote)=\"onVote($event)\"></booth>\r\n        </form>\r\n    </div>\r\n    <ng-template #votingCard>\r\n        <votingCard [votes]=\"votes\" state='open' title={{title}}></votingCard>\r\n    </ng-template>\r\n  `,\r\n    styleUrls: ['./style.css'],\r\n})\r\n\r\nexport class FormComponent {\r\n    @Input() votes!: { option: string; count: number; }[];\r\n    @Input() title!: string;\r\n    state: string = 'close';\r\n    error: string = 'close';\r\n\r\n    validationError() {\r\n        const votesOption = this.votes.map((votes) => (\r\n            votes.option\r\n        ));\r\n        const votesCount = this.votes.map((votes) => (\r\n            votes.count\r\n        ));\r\n        const votesValidation = this.votes.map((votes, index) => (\r\n            (votesOption[index].length <= 0 || votesCount[index] <= 0 || !votesCount[index] || this.title.length <= 0) ? true : false\r\n        ))\r\n        for (var i = 0; i < votesValidation.length; i++) {\r\n            if (votesValidation[i] == true) {\r\n                return true;\r\n            }\r\n        }\r\n        return false;\r\n    }\r\n\r\n    onVote(index: number) {\r\n        this.validationError() == false ? this.state = 'open' : this.error = 'open'\r\n    }\r\n}",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".m5 {\r\n    margin: 5px;\r\n  }\r\n\r\n.votingCard{\r\n  background-color: rgb(166, 200,224);\r\n  border: 1px solid black;\r\n  border-radius: 10px;\r\n}\r\n\r\n.error{\r\n  color: red;\r\n  font-size: 15px;\r\n}",
                     "styleUrl": "./style.css"
                 }
             ],
@@ -378,7 +521,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".m5 {\r\n    margin: 5px;\r\n  }\r\n\r\n.votingCard{\r\n  background-color: rgb(166, 200,224);\r\n  border: 1px solid black;\r\n  border-radius: 10px;\r\n}",
+                    "data": ".m5 {\r\n    margin: 5px;\r\n  }\r\n\r\n.votingCard{\r\n  background-color: rgb(166, 200,224);\r\n  border: 1px solid black;\r\n  border-radius: 10px;\r\n}\r\n\r\n.error{\r\n  color: red;\r\n  font-size: 15px;\r\n}",
                     "styleUrl": "./style.css"
                 }
             ],
@@ -388,13 +531,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-d1d5f2e3db3fcb5e204e6bd21ec039f3",
+            "id": "module-AppModule-9d7dcd8ee916f4377a4d9f40d2a9dc47",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { BoothComponent } from '../components/booth.component';\r\nimport { ResultComponent } from '../components/result.component';\r\nimport { VotingCardComponent } from '../components/votingCard.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    ResultComponent,\r\n    BoothComponent,\r\n    VotingCardComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { FormsModule } from '@angular/forms';\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { BoothComponent } from '../components/booth.component';\r\nimport { ResultComponent } from '../components/result.component';\r\nimport { VotingCardComponent } from '../components/votingCard.component';\r\nimport { FormComponent } from '../components/form.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    ResultComponent,\r\n    BoothComponent,\r\n    VotingCardComponent,\r\n    FormComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    FormsModule,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -408,6 +551,9 @@
                         },
                         {
                             "name": "BoothComponent"
+                        },
+                        {
+                            "name": "FormComponent"
                         },
                         {
                             "name": "ResultComponent"
@@ -486,6 +632,16 @@
                 "name": "PrimaryResultPage",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Form.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "PrimaryResultPage",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Result.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -525,6 +681,16 @@
                 "name": "SecondaryResultPage",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Form.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "SecondaryResultPage",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Result.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -550,6 +716,16 @@
                 "deprecationMessage": "",
                 "type": "Story<BoothComponent>",
                 "defaultValue": "(args: BoothComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Form.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<FormComponent>",
+                "defaultValue": "(args: FormComponent) => ({\r\n    props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -653,6 +829,38 @@
                     "defaultValue": "(args: BoothComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
+            "src/stories/Form.stories.ts": [
+                {
+                    "name": "PrimaryResultPage",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Form.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "SecondaryResultPage",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Form.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Form.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<FormComponent>",
+                    "defaultValue": "(args: FormComponent) => ({\r\n    props: args,\r\n})"
+                }
+            ],
             "src/stories/Result.stories.ts": [
                 {
                     "name": "PrimaryResultPage",
@@ -746,6 +954,15 @@
                 "status": "low"
             },
             {
+                "filePath": "src/components/form.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FormComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
                 "filePath": "src/components/result.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -805,6 +1022,36 @@
             },
             {
                 "filePath": "src/stories/Booth.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Form.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "PrimaryResultPage",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Form.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "SecondaryResultPage",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Form.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
